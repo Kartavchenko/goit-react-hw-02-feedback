@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { Container } from "../styled/Section";
 import { Statistics } from './Statistics';
 import { FeedbackOptions } from './FeedbackOptions';
 import { Notification } from './Notify';
@@ -37,12 +38,13 @@ export class Section extends Component {
     const total = this.totalCount();
     const percentage = this.countPercentage("good");
     return (
-      <div>
+      <Container>
         <h1>Please leave feedback</h1>
         <FeedbackOptions handleIncrement={this.handleIncrement} />
-        <Notification />
-        <Statistics good={good} neutral={neutral} bad={bad} total={total} percentage={percentage} />
-      </div>
+        {total
+        ? <Statistics good={good} neutral={neutral} bad={bad} total={total} percentage={percentage} />
+        : <Notification />}
+      </Container>
     );
   }
 }

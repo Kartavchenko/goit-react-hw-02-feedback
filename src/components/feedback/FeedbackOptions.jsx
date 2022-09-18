@@ -1,15 +1,22 @@
-export const FeedbackOptions = ({handleIncrement}) => {
+import { Box, Button } from '../styled/FeedbackOptions';
+import PropTypes from 'prop-types'
+
+export const FeedbackOptions = ({ handleIncrement }) => {
     return (
-        <div>
-          <button type="button" onClick={() => handleIncrement('good')}>
+        <Box>
+          <Button type="button" onClick={() => handleIncrement('good')}>
             Good
-          </button>
-          <button type="button" onClick={() => handleIncrement('neutral')}>
+          </Button>
+          <Button type="button" onClick={() => handleIncrement('neutral')}>
             Neutral
-          </button>
-          <button type="button" onClick={() => handleIncrement('bad')}>
+          </Button>
+          <Button type="button" onClick={() => handleIncrement('bad')}>
             Bad
-          </button>
-        </div>
+          </Button>
+        </Box>
     )
 };
+
+FeedbackOptions.propTypes = {
+  Button: PropTypes.string,
+}

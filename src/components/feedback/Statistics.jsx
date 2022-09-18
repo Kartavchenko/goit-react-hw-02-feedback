@@ -1,14 +1,22 @@
+import { List, Item } from "components/styled/Statistics";
+import PropTypes from 'prop-types'
+
 export const Statistics = ({ good, neutral, bad, total, percentage }) => {
   return (
-    <ul>
-      <li>
+    <List>
+      <Item>
         <h2>Statistics</h2>
-      </li>
-      <li>Good: {good}</li>
-      <li>Neutral: {neutral}</li>
-      <li>Bad: {bad}</li>
-      <li>Total: {total}</li>
-      <li>Positive Feedback: {percentage}%</li>
-    </ul>
+      </Item>
+      <Item>Good: {good}</Item>
+      <Item>Neutral: {neutral}</Item>
+      <Item>Bad: {bad}</Item>
+      <Item>Total: {total}</Item>
+      <Item>Positive Feedback: {percentage}%</Item>
+    </List>
   );
 };
+
+Statistics.propTypes = {
+  Item: PropTypes.string,
+  h2: PropTypes.string,
+}

@@ -1,5 +1,13 @@
-export const Notification = ({message}) => {
-    return (
-        message = "There is no feedback"
+import { Text } from "../styled/Notyfi";
+import PropTypes from 'prop-types'
+
+export const Notification = () => {
+    return ( <Text>
+       There is no feedback
+        </Text>
     )
+}
+
+Notification.propTypes = {
+    Text: PropTypes.string,
 }
