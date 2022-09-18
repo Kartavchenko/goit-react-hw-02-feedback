@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Kartavchenko/goit-react-hw-02-feedback.git/static/css/main.7acaea2f.css",
-    "main.js": "/Kartavchenko/goit-react-hw-02-feedback.git/static/js/main.c97c370a.js",
+    "main.js": "/Kartavchenko/goit-react-hw-02-feedback.git/static/js/main.a648536e.js",
     "index.html": "/Kartavchenko/goit-react-hw-02-feedback.git/index.html",
     "main.7acaea2f.css.map": "/Kartavchenko/goit-react-hw-02-feedback.git/static/css/main.7acaea2f.css.map",
-    "main.c97c370a.js.map": "/Kartavchenko/goit-react-hw-02-feedback.git/static/js/main.c97c370a.js.map"
+    "main.a648536e.js.map": "/Kartavchenko/goit-react-hw-02-feedback.git/static/js/main.a648536e.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.c97c370a.js"
+    "static/js/main.a648536e.js"
   ]
 }
