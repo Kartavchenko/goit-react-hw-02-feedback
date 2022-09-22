@@ -1,9 +1,13 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Container } from "../styled/Section";
-import { Statistics } from './Statistics';
-import { FeedbackOptions } from './FeedbackOptions';
-import { Notification } from './Notify';
+import { Component } from 'react';
+import { Container } from './section.styled';
+import { Statistics } from '../Statistic/Statistics';
+import { FeedbackOptions } from '../FeedbackOption/FeedbackOptions';
+import { Notification } from '../Notyfi/Notify';
+
+export const App = () => {
+  return <Section />;
+};
 
 export class Section extends Component {
   state = {
@@ -21,7 +25,7 @@ export class Section extends Component {
     const total = this.totalCount();
     const value = this.state[propertyName];
     const percentage = (value / total) * 100;
-    return Number(percentage.toFixed())
+    return Number(percentage.toFixed());
   }
 
   handleIncrement = vote => {
@@ -36,14 +40,22 @@ export class Section extends Component {
   render() {
     const { good, neutral, bad } = this.state;
     const total = this.totalCount();
-    const percentage = this.countPercentage("good");
+    const percentage = this.countPercentage('good');
     return (
       <Container>
         <h1>Please leave feedback</h1>
         <FeedbackOptions handleIncrement={this.handleIncrement} />
-        {total
-        ? <Statistics good={good} neutral={neutral} bad={bad} total={total} percentage={percentage} />
-        : <Notification />}
+        {total ? (
+          <Statistics
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={total}
+            percentage={percentage}
+          />
+        ) : (
+          <Notification />
+        )}
       </Container>
     );
   }

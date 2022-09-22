@@ -1,5 +1,5 @@
-import { List, Item } from "components/styled/Statistics";
-import PropTypes from 'prop-types'
+import { List, Item } from './statistics.styled';
+import PropTypes from 'prop-types';
 
 export const Statistics = ({ good, neutral, bad, total, percentage }) => {
   return (
@@ -19,4 +19,4 @@ export const Statistics = ({ good, neutral, bad, total, percentage }) => {
 Statistics.propTypes = {
   Item: PropTypes.string,
   h2: PropTypes.string,
-}
+};
