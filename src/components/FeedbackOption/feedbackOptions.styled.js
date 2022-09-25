@@ -4,8 +4,9 @@ export const Box = styled.li`
 list-style: none;
 display: inline;
 margin-right: 10px;
+
 &:last-child {
-margin-right: 0;
+  margin-right: 0;
 }
 `;
 
@@ -14,14 +15,9 @@ export const Button = styled.button`
   border-radius: 10px;
   background-color: whitesmoke;
   padding: 8px;
-  margin-right: 10px;
   cursor: pointer;
 
   &:active {
     background-color: aqua;
-  }
-
-  &:last-child {
-    margin-right: 0;
   }
 `;
