@@ -1,6 +1,10 @@
 import styled from '@emotion/styled';
 
-export const Box = styled.div``;
+export const Box = styled.li`
+list-style: none;
+display: inline;
+
+`;
 
 export const Button = styled.button`
   border: none;

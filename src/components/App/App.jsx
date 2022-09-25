@@ -28,23 +28,22 @@ export class Section extends Component {
     return Number(percentage.toFixed());
   }
 
-  handleIncrement = vote => {
-    this.setState(prevState => {
-      const value = prevState[vote];
-      return {
-        [vote]: value + 1,
-      };
-    });
+  onLeaveFeedback = e => {
+    const option = e.target.name;
+
+    this.setState(prevState => ({ [option]: prevState[option] + 1 }));
   };
 
   render() {
     const { good, neutral, bad } = this.state;
     const total = this.totalCount();
     const percentage = this.countPercentage('good');
+    const options = Object.keys(this.state);
+    const onLeaveFeedback = this.onLeaveFeedback;
     return (
       <Container>
         <h1>Please leave feedback</h1>
-        <FeedbackOptions handleIncrement={this.handleIncrement} />
+        <FeedbackOptions options={options} onLeaveFeedback={onLeaveFeedback} />
         {total ? (
           <Statistics
             good={good}
