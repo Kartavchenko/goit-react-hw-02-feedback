@@ -3,7 +3,10 @@ import styled from '@emotion/styled';
 export const Box = styled.li`
 list-style: none;
 display: inline;
-
+margin-right: 10px;
+&:last-child {
+margin-right: 0;
+}
 `;
 
 export const Button = styled.button`
